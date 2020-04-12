@@ -1,7 +1,7 @@
 @import url(../node_modules/normalize.css/normalize.css);
 @import url(./reset.css);
 @import url("https://fonts.googleapis.com/css2?family=Heebo:wght@500;700&family=Playfair+Display:wght@800&display=swap");
-.bg-dark, .button, body .first-section .banner .contain .info-banner .button, body .third-section .content .container .bg-dark {
+.bg-dark, .button, body .first-section .banner .contain .info-banner .button, body .third-section .content .container .bg-dark, body .eighth-section .content .column .form .group .send {
   background: #111111;
   color: white;
   padding: 15px;
@@ -9,18 +9,56 @@
   font-size: 1.175rem;
 }
 
-.button:hover, body .first-section .banner .contain .info-banner .button:hover, body .third-section .content .container .bg-dark:hover, body .third-section .content .container .button:hover {
+.button:hover, body .first-section .banner .contain .info-banner .button:hover, body .third-section .content .container .bg-dark:hover, body .third-section .content .container .button:hover, body .eighth-section .content .column .form .group .send:hover {
   background: white;
   color: #d90a2c;
 }
 
-.container, body .first-section .navbar .container, body .second-section .container, body .fourth-section .container {
+.container, body .first-section .navbar .container, body .second-section .container, body .fourth-section .container, body .eighth-section .footer .container {
   width: 90%;
   margin: auto;
 }
 
 body {
   font-family: "Heebo", sans-serif;
+  position: relative;
+}
+
+body .top {
+  position: fixed;
+  right: 2%;
+  bottom: 5%;
+  z-index: 99;
+  background: #111111;
+  width: 50px;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 0 0 10px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 0 10px rgba(0, 0, 0, 0.5);
+  opacity: 0.5;
+  display: none;
+}
+
+body .top.show {
+  display: block;
+}
+
+body .top:hover {
+  opacity: 1;
+}
+
+body .top i {
+  color: white;
+  font-size: 1.75rem;
 }
 
 body section {
@@ -271,7 +309,7 @@ body .first-section .banner .contain .info-banner .description {
   width: fit-content;
 }
 
-body .first-section .banner .contain .info-banner .button, body .first-section .banner .contain .info-banner .third-section .content .container .bg-dark, body .third-section .content .container .first-section .banner .contain .info-banner .bg-dark {
+body .first-section .banner .contain .info-banner .button, body .first-section .banner .contain .info-banner .third-section .content .container .bg-dark, body .third-section .content .container .first-section .banner .contain .info-banner .bg-dark, body .first-section .banner .contain .info-banner .eighth-section .content .column .form .group .send, body .eighth-section .content .column .form .group .first-section .banner .contain .info-banner .send {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -283,7 +321,7 @@ body .second-section {
   height: 86vh;
 }
 
-body .second-section .first-section .navbar .container, body .first-section .navbar .second-section .container, body .second-section .container, body .second-section .fourth-section .container, body .fourth-section .second-section .container {
+body .second-section .first-section .navbar .container, body .first-section .navbar .second-section .container, body .second-section .container, body .second-section .fourth-section .container, body .fourth-section .second-section .container, body .second-section .eighth-section .footer .container, body .eighth-section .footer .second-section .container {
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -292,7 +330,7 @@ body .second-section .first-section .navbar .container, body .first-section .nav
   color: white;
 }
 
-body .second-section .first-section .navbar .container .left-content, body .first-section .navbar .second-section .container .left-content, body .second-section .container .left-content, body .second-section .fourth-section .container .left-content, body .fourth-section .second-section .container .left-content {
+body .second-section .first-section .navbar .container .left-content, body .first-section .navbar .second-section .container .left-content, body .second-section .container .left-content, body .second-section .fourth-section .container .left-content, body .fourth-section .second-section .container .left-content, body .second-section .eighth-section .footer .container .left-content, body .eighth-section .footer .second-section .container .left-content {
   width: 50%;
 }
 
@@ -315,7 +353,7 @@ body .second-section .container .left-content .title span {
   padding: 0 3px;
 }
 
-body .second-section .first-section .navbar .container .right-content, body .first-section .navbar .second-section .container .right-content, body .second-section .container .right-content, body .second-section .fourth-section .container .right-content, body .fourth-section .second-section .container .right-content {
+body .second-section .first-section .navbar .container .right-content, body .first-section .navbar .second-section .container .right-content, body .second-section .container .right-content, body .second-section .fourth-section .container .right-content, body .fourth-section .second-section .container .right-content, body .second-section .eighth-section .footer .container .right-content, body .eighth-section .footer .second-section .container .right-content {
   width: 50%;
   height: 100%;
   display: -webkit-box;
@@ -408,7 +446,7 @@ body .third-section .content .background-img {
   width: 100%;
 }
 
-body .third-section .content .container, body .third-section .content .first-section .navbar .container, body .first-section .navbar .third-section .content .container, body .third-section .content .second-section .container, body .second-section .third-section .content .container, body .third-section .content .fourth-section .container, body .fourth-section .third-section .content .container {
+body .third-section .content .container, body .third-section .content .first-section .navbar .container, body .first-section .navbar .third-section .content .container, body .third-section .content .second-section .container, body .second-section .third-section .content .container, body .third-section .content .fourth-section .container, body .fourth-section .third-section .content .container, body .third-section .content .eighth-section .footer .container, body .eighth-section .footer .third-section .content .container {
   position: absolute;
   top: 0;
   padding: 0% 10%;
@@ -435,22 +473,22 @@ body .third-section .content .container .header-section .title {
   font-size: 50px;
   line-height: 65px;
   font-family: "Playfair Display", serif;
-  width: 70%;
+  width: 80%;
   color: white;
 }
 
-body .third-section .content .container .button, body .third-section .content .container .first-section .banner .contain .info-banner .button, body .first-section .banner .contain .info-banner .third-section .content .container .button, body .third-section .content .first-section .navbar .container .banner .contain .info-banner .button, body .third-section .content .first-section .banner .contain .info-banner .navbar .container .button, body .first-section .navbar .third-section .content .container .banner .contain .info-banner .button, body .third-section .content .container .bg-dark {
+body .third-section .content .container .button, body .third-section .content .container .first-section .banner .contain .info-banner .button, body .first-section .banner .contain .info-banner .third-section .content .container .button, body .third-section .content .first-section .navbar .container .banner .contain .info-banner .button, body .third-section .content .first-section .banner .contain .info-banner .navbar .container .button, body .first-section .navbar .third-section .content .container .banner .contain .info-banner .button, body .third-section .content .container .bg-dark, body .third-section .eighth-section .content .container .column .form .group .send, body .eighth-section .third-section .content .container .column .form .group .send, body .third-section .eighth-section .content .column .form .group .container .send, body .eighth-section .third-section .content .column .form .group .container .send, body .third-section .content .eighth-section .footer .container .content .column .form .group .send {
   padding: 20px;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
 }
 
-body .third-section .content .container .button span, body .third-section .content .container .first-section .banner .contain .info-banner .button span, body .first-section .banner .contain .info-banner .third-section .content .container .button span, body .third-section .content .first-section .navbar .container .banner .contain .info-banner .button span, body .third-section .content .first-section .banner .contain .info-banner .navbar .container .button span, body .first-section .navbar .third-section .content .container .banner .contain .info-banner .button span, body .third-section .content .container .bg-dark span {
+body .third-section .content .container .button span, body .third-section .content .container .first-section .banner .contain .info-banner .button span, body .first-section .banner .contain .info-banner .third-section .content .container .button span, body .third-section .content .first-section .navbar .container .banner .contain .info-banner .button span, body .third-section .content .first-section .banner .contain .info-banner .navbar .container .button span, body .first-section .navbar .third-section .content .container .banner .contain .info-banner .button span, body .third-section .content .container .bg-dark span, body .third-section .eighth-section .content .container .column .form .group .send span, body .eighth-section .third-section .content .container .column .form .group .send span, body .third-section .eighth-section .content .column .form .group .container .send span, body .eighth-section .third-section .content .column .form .group .container .send span, body .third-section .content .eighth-section .footer .container .content .column .form .group .send span {
   margin: 0 5px;
 }
 
-body .third-section .content .container .button i, body .third-section .content .container .first-section .banner .contain .info-banner .button i, body .first-section .banner .contain .info-banner .third-section .content .container .button i, body .third-section .content .first-section .navbar .container .banner .contain .info-banner .button i, body .third-section .content .first-section .banner .contain .info-banner .navbar .container .button i, body .first-section .navbar .third-section .content .container .banner .contain .info-banner .button i, body .third-section .content .container .bg-dark i {
+body .third-section .content .container .button i, body .third-section .content .container .first-section .banner .contain .info-banner .button i, body .first-section .banner .contain .info-banner .third-section .content .container .button i, body .third-section .content .first-section .navbar .container .banner .contain .info-banner .button i, body .third-section .content .first-section .banner .contain .info-banner .navbar .container .button i, body .first-section .navbar .third-section .content .container .banner .contain .info-banner .button i, body .third-section .content .container .bg-dark i, body .third-section .eighth-section .content .container .column .form .group .send i, body .eighth-section .third-section .content .container .column .form .group .send i, body .third-section .eighth-section .content .column .form .group .container .send i, body .eighth-section .third-section .content .column .form .group .container .send i, body .third-section .content .eighth-section .footer .container .content .column .form .group .send i {
   vertical-align: middle;
   margin: 0 5px;
 }
@@ -459,7 +497,7 @@ body .fourth-section {
   height: 90vh;
 }
 
-body .fourth-section .first-section .navbar .container, body .first-section .navbar .fourth-section .container, body .fourth-section .second-section .container, body .second-section .fourth-section .container, body .fourth-section .container {
+body .fourth-section .first-section .navbar .container, body .first-section .navbar .fourth-section .container, body .fourth-section .second-section .container, body .second-section .fourth-section .container, body .fourth-section .container, body .fourth-section .eighth-section .footer .container, body .eighth-section .footer .fourth-section .container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -477,12 +515,12 @@ body .fourth-section .first-section .navbar .container, body .first-section .nav
   height: 100%;
 }
 
-body .fourth-section .first-section .navbar .container .head-section p, body .first-section .navbar .fourth-section .container .head-section p, body .fourth-section .second-section .container .head-section p, body .second-section .fourth-section .container .head-section p, body .fourth-section .container .head-section p {
+body .fourth-section .first-section .navbar .container .head-section p, body .first-section .navbar .fourth-section .container .head-section p, body .fourth-section .second-section .container .head-section p, body .second-section .fourth-section .container .head-section p, body .fourth-section .container .head-section p, body .fourth-section .eighth-section .footer .container .head-section p, body .eighth-section .footer .fourth-section .container .head-section p {
   font-family: "Playfair Display", serif;
   font-size: 64px;
 }
 
-body .fourth-section .first-section .navbar .container .logos, body .first-section .navbar .fourth-section .container .logos, body .fourth-section .second-section .container .logos, body .second-section .fourth-section .container .logos, body .fourth-section .container .logos {
+body .fourth-section .first-section .navbar .container .logos, body .first-section .navbar .fourth-section .container .logos, body .fourth-section .second-section .container .logos, body .second-section .fourth-section .container .logos, body .fourth-section .container .logos, body .fourth-section .eighth-section .footer .container .logos, body .eighth-section .footer .fourth-section .container .logos {
   width: 100%;
   height: 45%;
   display: -webkit-box;
@@ -536,7 +574,7 @@ body .fifth-section .content .background-img {
   width: 100%;
 }
 
-body .fifth-section .content .container, body .fifth-section .content .first-section .navbar .container, body .first-section .navbar .fifth-section .content .container, body .fifth-section .content .second-section .container, body .second-section .fifth-section .content .container, body .fifth-section .content .fourth-section .container, body .fourth-section .fifth-section .content .container {
+body .fifth-section .content .container, body .fifth-section .content .first-section .navbar .container, body .first-section .navbar .fifth-section .content .container, body .fifth-section .content .second-section .container, body .second-section .fifth-section .content .container, body .fifth-section .content .fourth-section .container, body .fourth-section .fifth-section .content .container, body .fifth-section .content .eighth-section .footer .container, body .eighth-section .footer .fifth-section .content .container {
   position: absolute;
   top: 0;
   padding: 0% 10%;
@@ -550,7 +588,7 @@ body .fifth-section .content .container, body .fifth-section .content .first-sec
           align-items: center;
 }
 
-body .fifth-section .content .container p, body .fifth-section .content .first-section .navbar .container p, body .first-section .navbar .fifth-section .content .container p, body .fifth-section .content .second-section .container p, body .second-section .fifth-section .content .container p, body .fifth-section .content .fourth-section .container p, body .fourth-section .fifth-section .content .container p {
+body .fifth-section .content .container p, body .fifth-section .content .first-section .navbar .container p, body .first-section .navbar .fifth-section .content .container p, body .fifth-section .content .second-section .container p, body .second-section .fifth-section .content .container p, body .fifth-section .content .fourth-section .container p, body .fourth-section .fifth-section .content .container p, body .fifth-section .content .eighth-section .footer .container p, body .eighth-section .footer .fifth-section .content .container p {
   font-family: "Playfair Display", serif;
   font-size: 70px;
   line-height: 95px;
@@ -625,7 +663,7 @@ body .seventh-section .content {
 body .seventh-section .content .map {
   width: 50%;
   height: 100%;
-  background: #000000;
+  background: white;
 }
 
 body .seventh-section .content .contacts {
@@ -692,5 +730,162 @@ body .seventh-section .content .contacts .hours p {
 
 body .seventh-section .content .contacts .hours p:first-child {
   font-weight: 800;
+}
+
+body .eighth-section {
+  background: #111111;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body .eighth-section .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  color: white;
+  height: 85vh;
+}
+
+body .eighth-section .content .column {
+  width: 50%;
+  height: 100%;
+  padding: 6% 5%;
+}
+
+body .eighth-section .content .column .about {
+  margin-top: 65px;
+  font-size: 22px;
+  line-height: 30px;
+  width: 85%;
+  font-weight: 200;
+}
+
+body .eighth-section .content .column .title {
+  font-size: 58px;
+  line-height: 70px;
+  font-family: "Playfair Display", serif;
+}
+
+body .eighth-section .content .column .form {
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 80px;
+}
+
+body .eighth-section .content .column .form .group:first-child {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body .eighth-section .content .column .form .group:last-child .form-group {
+  width: 100%;
+  margin-top: 30px;
+}
+
+body .eighth-section .content .column .form .group .form-group {
+  width: 48%;
+}
+
+body .eighth-section .content .column .form .group .form-group label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  line-height: 36px;
+  font-size: 22px;
+}
+
+body .eighth-section .content .column .form .group .form-group .form-control {
+  width: 100%;
+  padding: 15px 10px;
+}
+
+body .eighth-section .content .column .form .group .form-group .form-control .form-group {
+  width: 100%;
+}
+
+body .eighth-section .content .column .form .group .send {
+  padding: 20px 40px;
+  background: #d90a2c;
+  margin-top: 30px;
+  font-size: 24px;
+}
+
+body .eighth-section .content .column .form .group .send:hover {
+  cursor: pointer;
+}
+
+body .eighth-section .footer {
+  height: 15vh;
+  color: white;
+  background: #000000;
+}
+
+body .eighth-section .footer .first-section .navbar .container, body .first-section .navbar .eighth-section .footer .container, body .eighth-section .footer .second-section .container, body .second-section .eighth-section .footer .container, body .eighth-section .footer .fourth-section .container, body .fourth-section .eighth-section .footer .container, body .eighth-section .footer .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+}
+
+body .eighth-section .footer .container .left {
+  width: 50%;
+}
+
+body .eighth-section .footer .container .left p {
+  font-size: 22px;
+}
+
+body .eighth-section .footer .container .right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 40%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 22px;
+}
+
+body .eighth-section .footer .container .right a {
+  color: white;
 }
 /*# sourceMappingURL=style.css.map */

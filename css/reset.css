@@ -3,6 +3,10 @@
    License: none (public domain)
 */
 
+* {
+	box-sizing: border-box;
+}
+
 html,
 body,
 div,
@@ -90,7 +94,6 @@ video {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
-	box-sizing: border-box;
 }
 /* HTML5 display-role reset for older browsers */
 article,
@@ -113,8 +116,10 @@ ol,
 ul {
 	list-style: none;
 }
-a {
+a,
+button {
 	text-decoration: none;
+	transition: all 0.4s ease-in-out;
 }
 blockquote,
 q {
@@ -135,7 +140,7 @@ img {
 	max-width: 100%;
 	display: block;
 }
-.btn {
+.button {
 	border: 0;
 	outline: none;
 }
