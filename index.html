@@ -218,23 +218,26 @@
             </div>
             <div class="column">
                 <p class="title">we are hearing from you!</p>
-                <form class="form">
+                <form class="form" id="basic-form" action="" method="post">
                     <div class="group">
                         <div class="form-group">
                             <label for="name">Name</label>
-                            <input type="text" class="form-control" id="name" placeholder="Enter name">
+                            <input type="text" class="form-control" id="name" required placeholder="Enter name"
+                                name="name">
                         </div>
                         <div class="form-group">
                             <label for="email">Email address</label>
-                            <input type="email" class="form-control" id="email" placeholder="Enter email">
+                            <input type="email" class="form-control" id="email" name="email" required
+                                placeholder="Enter email">
                         </div>
                     </div>
                     <div class="group">
                         <div class="form-group">
                             <label for="message">Message</label>
-                            <textarea class="form-control" id="message" rows="10"></textarea>
+                            <textarea class="form-control" id="message" rows="8" name="message"
+                                placeholder="Enter your Message" required></textarea>
                         </div>
-                        <button type="button" class="send button">Submit</button>
+                        <input id="submit" class="submit send button" type="submit" value="SUBMIT">
                     </div>
                 </form>
             </div>
@@ -254,6 +257,9 @@
             </div>
         </div>
     </section>
+    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
+    <script src="./js/script.js"></script>
 </body>
 
 </html>

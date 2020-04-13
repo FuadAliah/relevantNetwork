@@ -27,7 +27,7 @@ body {
 body .top {
   position: fixed;
   right: 2%;
-  bottom: 5%;
+  bottom: -10%;
   z-index: 99;
   background: #111111;
   width: 50px;
@@ -44,12 +44,13 @@ body .top {
   border-radius: 50%;
   -webkit-box-shadow: 0 0 0 10px rgba(0, 0, 0, 0.5);
           box-shadow: 0 0 0 10px rgba(0, 0, 0, 0.5);
-  opacity: 0.5;
-  display: none;
+  opacity: 0.75;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
 }
 
 body .top.show {
-  display: block;
+  bottom: 5%;
 }
 
 body .top:hover {
@@ -783,7 +784,7 @@ body .eighth-section .content .column .title {
 
 body .eighth-section .content .column .form {
   width: 100%;
-  height: auto;
+  height: 80%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -794,7 +795,7 @@ body .eighth-section .content .column .form {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-top: 80px;
+  margin-top: 44px;
 }
 
 body .eighth-section .content .column .form .group:first-child {
@@ -808,11 +809,11 @@ body .eighth-section .content .column .form .group:first-child {
 
 body .eighth-section .content .column .form .group:last-child .form-group {
   width: 100%;
-  margin-top: 30px;
 }
 
 body .eighth-section .content .column .form .group .form-group {
   width: 48%;
+  position: relative;
 }
 
 body .eighth-section .content .column .form .group .form-group label {
@@ -830,17 +831,25 @@ body .eighth-section .content .column .form .group .form-group label {
 body .eighth-section .content .column .form .group .form-group .form-control {
   width: 100%;
   padding: 15px 10px;
+  border: 0;
 }
 
 body .eighth-section .content .column .form .group .form-group .form-control .form-group {
   width: 100%;
 }
 
+body .eighth-section .content .column .form .group .form-group label.error {
+  position: absolute;
+  bottom: -35px;
+  font-size: 16px;
+  color: tomato;
+}
+
 body .eighth-section .content .column .form .group .send {
   padding: 20px 40px;
   background: #d90a2c;
-  margin-top: 30px;
   font-size: 24px;
+  margin-top: 50px;
 }
 
 body .eighth-section .content .column .form .group .send:hover {
