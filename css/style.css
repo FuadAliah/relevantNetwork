@@ -897,4 +897,8 @@ body .eighth-section .footer .container .right {
 body .eighth-section .footer .container .right a {
   color: white;
 }
+
+body .eighth-section .footer .container .right a:hover {
+  color: #d90a2c;
+}
 /*# sourceMappingURL=style.css.map */
