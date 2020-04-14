@@ -24,6 +24,33 @@ $(document).ready(function () {
         }
     });
 
+    function scrollToSection(hash) {
+        var target = '';
+        if (hash) {
+            target = $(hash);
+        } else {
+            target = $(window.location.hash);
+        }
+        if (target.length) {
+            $('html,body').stop().animate({
+                scrollTop: target.offset().top - 96
+            }, 1000);
+            return false;
+        }
+    }
+
+    $("a[href*='#']:not([href='#'])").click(function (e) {
+        e.preventDefault();
+        scrollToSection()
+        setTimeout(() => {
+            scrollToSection(e.target.hash);
+        }, 100);
+    });
+
+
+
+
+
     $('#top').click(function () {
         $('html, body').animate({ scrollTop: 0 }, 'slow');
         return false;

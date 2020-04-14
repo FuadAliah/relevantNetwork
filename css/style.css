@@ -1,6 +1,10 @@
 @import url(../node_modules/normalize.css/normalize.css);
 @import url(./reset.css);
 @import url("https://fonts.googleapis.com/css2?family=Heebo:wght@500;700&family=Playfair+Display:wght@800&display=swap");
+html {
+  behavior: smooth;
+}
+
 .bg-dark, .button, body .first-section .banner .contain .info-banner .button, body .third-section .content .container .bg-dark, body .eighth-section .content .column .form .group .send {
   background: #111111;
   color: white;
@@ -96,6 +100,10 @@ body .first-section .navbar {
       -ms-flex-align: center;
           align-items: center;
   padding: 20px 0;
+  position: fixed;
+  width: 100%;
+  z-index: 9;
+  background: white;
 }
 
 body .first-section .navbar .container .content {
@@ -177,6 +185,7 @@ body .first-section .fixed-menu {
       -ms-flex-direction: column;
           flex-direction: column;
   color: white;
+  z-index: 10;
 }
 
 body .first-section .fixed-menu .info {
