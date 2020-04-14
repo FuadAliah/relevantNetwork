@@ -27,6 +27,10 @@ $paragraphsFonts: "Heebo", sans-serif;
     width: 90%;
     margin: auto;
 }
+.titles {
+    font-family: $titlesFonts;
+    font-weight: 800;
+}
 
 body {
     font-family: $paragraphsFonts;
@@ -162,7 +166,7 @@ body {
                 a {
                     color: white;
                     &:last-child {
-                        font-family: $titlesFonts;
+                        @extend .titles;
                         font-size: 1.5rem;
                     }
                 }
@@ -192,8 +196,9 @@ body {
                     display: flex;
                     flex-direction: column;
                     justify-content: space-between;
+
                     .title {
-                        font-family: $titlesFonts;
+                        @extend .titles;
                         text-align: initial;
                         font-size: 60px;
                     }
@@ -208,6 +213,10 @@ body {
                         @extend .button;
                         width: fit-content;
                         margin: 0 auto;
+                    }
+                    &.lan {
+                        right: 58%;
+                        left: unset;
                     }
                 }
             }
@@ -230,11 +239,11 @@ body {
                     font-family: $paragraphsFonts;
                 }
                 .title {
+                    @extend .titles;
                     font-size: 68px;
                     line-height: 84px;
-                    font-family: "Playfair Display", serif;
                     margin-top: 10px;
-                    width: 60%;
+                    width: 61%;
                     span {
                         background: $redColor;
                         padding: 0 3px;
@@ -319,9 +328,9 @@ body {
                         font-family: $paragraphsFonts;
                     }
                     .title {
+                        @extend .titles;
                         font-size: 50px;
                         line-height: 65px;
-                        font-family: "Playfair Display", serif;
                         width: 80%;
                         color: white;
                     }
@@ -353,7 +362,7 @@ body {
             height: 100%;
             .head-section {
                 p {
-                    font-family: $titlesFonts;
+                    @extend .titles;
                     font-size: 64px;
                 }
             }
@@ -400,7 +409,7 @@ body {
                 width: 100%;
                 align-items: center;
                 p {
-                    font-family: $titlesFonts;
+                    @extend .titles;
                     font-size: 70px;
                     line-height: 95px;
                     text-align: center;
@@ -517,7 +526,8 @@ body {
             .column {
                 width: 50%;
                 height: 100%;
-                padding: 6% 5%;
+                padding: 5%;
+                position: relative;
                 .about {
                     margin-top: 65px;
                     font-size: 22px;
@@ -528,15 +538,26 @@ body {
                 .title {
                     font-size: 58px;
                     line-height: 70px;
-                    font-family: $titlesFonts;
+                    @extend .titles;
+                }
+                .thankful {
+                    font-size: 24px;
+                    position: absolute;
+                    margin-top: 20px;
+                    color: green;
+                    visibility: hidden;
+                    &.mes {
+                        visibility: visible;
+                        transition: all 0.4s ease-in-out;
+                    }
                 }
                 .form {
                     width: 100%;
-                    height: 80%;
+                    height: 75%;
                     display: flex;
                     flex-direction: column;
                     justify-content: space-between;
-                    margin-top: 44px;
+                    margin-top: 80px;
                     .group {
                         &:first-child {
                             display: flex;
