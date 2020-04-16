@@ -4,10 +4,6 @@ $(document).ready(function () {
         $('.loading').addClass('hidden');
     }, 4000)
 
-    setTimeout(function () {
-        $('.hidden').css('display', 'none');
-    }, 5000)
-
     function setLanguage(newLang) {
         var lang = localStorage.lang = 'en';
         if (newLang) {

@@ -47,13 +47,14 @@ body .loading {
           justify-content: center;
   width: 100vw;
   height: 100vh;
-  background: #ffffff;
-  -webkit-transition: all 1.5s ease-in-out;
-  transition: all 1.5s ease-in-out;
+  background: #fcfefc;
+  top: 0;
 }
 
 body .loading.hidden {
-  opacity: 0;
+  -webkit-transition: all 0.7s ease-in-out;
+  transition: all 0.7s ease-in-out;
+  top: -100vh;
 }
 
 body .top {

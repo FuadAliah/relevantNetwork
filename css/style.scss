@@ -43,10 +43,11 @@ body {
         justify-content: center;
         width: 100vw;
         height: 100vh;
-        background: #ffffff;
-        transition: all 1.5s ease-in-out;
+        background: #fcfefc;
+        top: 0;
         &.hidden {
-            opacity: 0;
+            transition: all 0.7s ease-in-out;
+            top: -100vh
         }
     }
     font-family: $paragraphsFonts;
