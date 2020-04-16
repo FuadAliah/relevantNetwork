@@ -35,6 +35,20 @@ html {
 }
 
 body {
+    .loading {
+        position: fixed;
+        z-index: 9999;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100vw;
+        height: 100vh;
+        background: #ffffff;
+        transition: all 1.5s ease-in-out;
+        &.hidden {
+            opacity: 0;
+        }
+    }
     font-family: $paragraphsFonts;
     position: relative;
     .top {
@@ -75,11 +89,12 @@ body {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 20px 0;
+            padding: 25px 0;
             position: fixed;
             width: 100%;
             z-index: 9;
             background: white;
+            transition: all 0.4s ease-in-out;
             .container {
                 @extend .container;
                 .content {
@@ -103,9 +118,21 @@ body {
                             a {
                                 color: $darkColor;
                                 font-family: $paragraphsFonts;
-                                padding: 0 20px;
+                                padding: 34px 10px;
                                 &:hover {
                                     color: $redColor;
+                                }
+                                &.active {
+                                    position: relative;
+                                    color: $redColor;
+                                    &::after {
+                                        content: "";
+                                        position: absolute;
+                                        border-bottom: solid 4px $redColor;
+                                        width: 100%;
+                                        bottom: 0px;
+                                        left: 0;
+                                    }
                                 }
                             }
                             &:last-child {
@@ -117,12 +144,22 @@ body {
                                     &:hover {
                                         background: $redColor;
                                     }
+                                    &:last-child {
+                                        &::after {
+                                            content: "";
+                                            border-bottom: none;
+                                        }
+                                    }
                                 }
                             }
                         }
                     }
                 }
             }
+        }
+        .navlight {
+            background: #f9f9f9;
+            padding: 15px 0;
         }
         .fixed-menu {
             width: 67px;
@@ -270,15 +307,18 @@ body {
                     width: 74%;
                 }
                 .data {
-                    display: flex;
                     width: 100%;
-                    height: 33%;
-                    justify-content: space-between;
+                    display: grid;
+                    grid-template-columns: auto auto;
+                    grid-column-gap: 50px;
+                    grid-row-gap: 50px;
+
                     .column {
                         display: flex;
                         flex-direction: column;
                         justify-content: space-between;
-                        width: 43%;
+                        width: 100%;
+                        height: 230px;
                         .icon {
                             i {
                                 font-size: 3rem;
@@ -290,7 +330,7 @@ body {
                             font-size: 24px;
                         }
                         .description {
-                            font-size: 18px;
+                            font-size: 20px;
                             line-height: 24px;
                             color: darken($grayColor, 20%);
                         }
@@ -376,16 +416,11 @@ body {
             .logos {
                 width: 100%;
                 height: 45%;
-                display: flex;
-                flex-direction: column;
-                justify-content: space-between;
-                .row {
-                    display: flex;
-                    justify-content: space-between;
-                    width: 100%;
-                    img {
-                        height: fit-content;
-                    }
+                display: grid;
+                grid-template-columns: auto auto auto auto auto;
+                grid-row-gap: 50px;
+                img {
+                    height: fit-content;
                 }
             }
         }

@@ -1,0 +1,98 @@
+{
+    "home": {
+        "img": "../imgs/home_img.png",
+        "title": "Be a part of Relevent Network and sign up now!",
+        "paragraph": "Register as Advertiser or Affiliate, and enjoy with best marketing exprenice in middle east."
+    },
+    "service": {
+        "slog": "WHAT WE DO?",
+        "title": "We Help Your Online business to Grow in MENA.",
+        "head": "Our clients describe us as a product team which creates amazing UI/UX experiences, by crafting top-notch user experience.",
+        "services": [
+            {
+                "icon": "<i class='fas fa-globe fa-lg'></i>",
+                "title": "Local Marketing Partners",
+                "paragraph": "We have built an extensive network of local marketers and affiliates in the MENA region, specializing in various types of performance offers."
+            },
+            {
+                "icon": "<i class='far fa-newspaper fa-lg'></i>",
+                "title": "Regional Industry Expertise",
+                "paragraph": "Our team has acquired many years of accumulated experience in digital marketing, prior to and after launching Relevant Network."
+            },
+            {
+                "icon": "<i class='far fa-credit-card fa-lg'></i>",
+                "title": "Cultural Understanding",
+                "paragraph": "We have built an extensive network of local marketers and affiliates in the MENA region, specializing in various types of performance offers."
+            },
+            {
+                "icon": "<i class='fab fa-font-awesome-flag fa-lg'></i>",
+                "title": "Growing Together",
+                "paragraph": "Our team has acquired many years of accumulated experience in digital marketing, prior to and after launching Relevant Network."
+            }
+        ],
+        "increase": [
+            {
+                "img": "./imgs/sales_img.png",
+                "slog": "LOOKING TO INCREASE SALES?",
+                "title": "I Want To Increase My E-Commerce Sales, Influence And Profitability"
+            },
+            {
+                "img": "./imgs/sales_img.png",
+                "slog": "LOOKING TO INCREASE TRAFIC?",
+                "title": "I Want To Monetize My Online Traffic - Site, Blog Or Social Assets - To Maximize Profits"
+            }
+        ]
+    },
+    "clients": [
+        {
+            "path": "../imgs/logo1.png",
+            "alt": "Borderless Access"
+        },
+        {
+            "path": "../imgs/logo2.png",
+            "alt": "Modanisa"
+        },
+        {
+            "path": "../imgs/logo3.png",
+            "alt": "MarkaVIP"
+        },
+        {
+            "path": "../imgs/logo4.png",
+            "alt": "Paltalk"
+        },
+        {
+            "path": "../imgs/logo5.png",
+            "alt": "CashU"
+        },
+        {
+            "path": "../imgs/logo6.png",
+            "alt": "YouGov"
+        },
+        {
+            "path": "../imgs/logo7.png",
+            "alt": "Ipsos"
+        },
+        {
+            "path": "../imgs/logo8.png",
+            "alt": "Toluna"
+        },
+        {
+            "path": "../imgs/logo9.png",
+            "alt": "Al Tayer"
+        }
+    ],
+    "qoute": {
+        "img": "../imgs/partner_img.png",
+        "text": "Relevant Network is your partner for performance marketing in the Middle East and North Africa (MENA)"
+    },
+    "team": {
+        "img": "../imgs/video.png"
+    },
+    "footer": {
+        "logo": "../imgs/footer_logo.svg",
+        "about": "Relevant Network is your partner for performance marketing in the Middle East and North Africa (MENA). Grow your online business through our Affiliate Marketing & In-House Media Buying Services which enable you to pay per user acquisition and sales generated. Our services cover Affiliate Program Set-Up & Management; Landing Page Optimization; Advice on Redesign & Localization of Marketing Materials; Conversion Funnel Optimization; and Performance-Based Media Buying Services."
+    },
+    "copyright": {
+        "at": "© 2020, Relevent Network. Made with passion by Tawfeeq Amro."
+    }
+}
